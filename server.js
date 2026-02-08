@@ -6,6 +6,7 @@ function getTcpRtt(socket) {
   try {
 	console.log(`ss -ti state established 2>/dev/null | grep -A1 "${socket.remotePort}"`);
     const out = execSync(`ss -ti state established 2>/dev/null | grep -A1 "${socket.remotePort}"`, { encoding: 'utf8' });
+	console.log(`out`, out);
     const match = out.match(/rtt:(\d+\.?\d*)/);
     return match ? parseFloat(match[1]) : null;
   } catch { return null; }
