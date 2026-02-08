@@ -1,6 +1,6 @@
-const { WebSocketServer } = require('ws');
-const http = require('http');
-const { execSync } = require('child_process');
+import { WebSocketServer } from 'ws';
+import http from 'http';
+import { execSync } from 'child_process';
 
 function getTcpRtt(socket) {
   try {
