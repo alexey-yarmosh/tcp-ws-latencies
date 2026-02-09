@@ -55,10 +55,10 @@ async function main() {
   const diff = wsRtt - tcpRtt;
   const isVpn = diff > 30;
 
-  console.log(`TCP RTT:  ${tcpRtt.toFixed(2)}ms`);
-  console.log(`WS RTT:   ${wsRtt.toFixed(2)}ms`);
-  console.log(`Diff:     ${diff.toFixed(2)}ms`);
-  console.log(`VPN:      ${isVpn ? 'YES' : 'NO'}`);
+  console.log(`Client TCP RTT: ${tcpRtt.toFixed(2)}ms`);
+  console.log(`WS RTT:         ${wsRtt.toFixed(2)}ms`);
+  console.log(`Diff:           ${diff.toFixed(2)}ms`);
+  console.log(`VPN:            ${isVpn ? 'YES' : 'NO'}`);
 }
 
 main().catch(console.error);

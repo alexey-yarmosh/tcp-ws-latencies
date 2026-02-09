@@ -24,7 +24,7 @@ server.on('connection', (socket) => {
     const rtt = getTcpRtt(socket);
     if (rtt !== null) {
       clients.set(ip, rtt);
-      console.log(`TCP RTT for IP ${ip} Port ${socket.remotePort} is ${rtt.toFixed(3)}ms`);
+      console.log(`Server TCP RTT for IP ${ip}: ${rtt.toFixed(3)}ms`);
     }
   });
 });
